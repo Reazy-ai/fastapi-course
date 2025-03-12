@@ -1,7 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, Column, TIMESTAMP, func
-from sqlmodel import Field, SQLModel, Relationship
+from sqlmodel import Field, SQLModel, Relationship, Boolean, Column, TIMESTAMP, func
 
 
 class Post(SQLModel, table=True):

@@ -1,7 +1,6 @@
 from fastapi import HTTPException, APIRouter, status
 from fastapi.params import Depends
-from sqlalchemy import func
-from sqlmodel import select, update
+from sqlmodel import select, update, func
 from typing import List, Annotated, Optional
 
 from app import schemas, models, oauth2

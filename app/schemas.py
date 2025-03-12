@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr, validator, field_validator
+from pydantic import BaseModel, EmailStr
 
 
 class PostBase(BaseModel):
@@ -53,7 +53,7 @@ class Vote(BaseModel):
     dir: int
 
     @classmethod
-    def validate_vote_value(self, value):
+    def validate_vote_value(cls, value):
         if value not in (0, 1):
             raise ValueError("vote_value must be either 0 or 1")
         return value
